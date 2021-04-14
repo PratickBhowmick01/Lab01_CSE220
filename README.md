@@ -37,3 +37,43 @@ def splitArray(a):
     
 print(splitArray(A)) 
 
+#Task09: Palindrome
+
+array = [10,20,0,0,0,10,20,30]   #size=5, size = 5, length = 8
+def palindrome(a,start,size): 
+    temp = []
+    i = (start+size-1) % len(a)   #last index
+    count = 0
+    while(count < size):        #storing in reverse pattern
+        temp.append(a[i])
+        count += 1
+        i -= 1
+        if(i < 0):
+            i = len(a) - 1    
+            
+    result = "True"         #checking for palindrome
+    count = 0
+    ind = start
+    while(count < size):
+        if(temp[count] != a[ind]):
+            result = "False"
+            break         
+        count += 1
+        ind = (ind + 1) % len(a)
+    
+    if(result == "True"):
+        return True 
+    else:
+        return False
+                
+print(palindrome(array,5,5)) 
+
+
+
+
+
+
+
+
+
+
