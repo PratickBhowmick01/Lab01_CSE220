@@ -3,6 +3,7 @@ Lab assignments
 
 #Task05 #Splits an array as a balanced beam
 #Lab-1
+
 A = []            #Taking array input 
 i = 0
 while (i < 5):
